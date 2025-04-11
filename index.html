@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centurion Medical Equipment LLC</title>
-  <link rel="icon" href="/images/centurion-logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protected Access</title>
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      margin: 0;
     }
     .login-container {
       background: #fff;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
       text-align: center;
     }
-    input[type="password"] {
-      padding: 0.5rem;
+    input {
+      padding: 0.6rem;
       font-size: 1rem;
       margin-top: 1rem;
       width: 80%;
-      border-radius: 5px;
-      border: 1px solid #ccc;
     }
     button {
       margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
       background-color: #932727;
-      color: #fff;
+      color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
+      font-size: 1rem;
       cursor: pointer;
     }
     #error {
@@ -50,21 +46,20 @@
 </head>
 <body>
   <div class="login-container">
-    <h2>Site Under Construction</h2>
-    <p>Please enter the password to continue:</p>
-    <input type="password" id="password" placeholder="Password">
-    <br>
+    <h2>This Site is Under Construction</h2>
+    <p>Enter password to continue:</p>
+    <input type="password" id="pw" placeholder="Password" />
+    <br />
     <button onclick="login()">Enter</button>
-    <p id="error">Incorrect password. Please try again.</p>
+    <div id="error">Incorrect password. Please try again.</div>
   </div>
-
   <script>
     function login() {
-      const pw = document.getElementById('password').value;
-      if (pw === 'centurion2025') {
-        window.location.href = 'home.html';
+      const pw = document.getElementById("pw").value;
+      if (pw === "centurion2025") {
+        window.location.href = "home.html";
       } else {
-        document.getElementById('error').style.display = 'block';
+        document.getElementById("error").style.display = "block";
       }
     }
   </script>
